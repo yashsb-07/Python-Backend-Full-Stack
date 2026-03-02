@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #F2F2F2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container {
+   background-color: #F2F2F2;
+   padding: 20px;
+   text-align: center;
+}
+
+.card {
+   background-color: #FFFFFF;
+   text-align: left;
+   margin: 20px;
+   padding: 15px;
+}
+
+.card p {
+   color: #555555;
+   line-height: 1.5;
+   margin-bottom: 10px;
+}
+
+.card > h2 {
+   color: #003366;
+   letter-spacing: 1px;
+}
+
+h2 + p {
+   font-weight: bold;
+}
+
+a[target="_blank"] {
+   text-decoration: none;
+   color: #B8860B;
+   font-weight: bold;
+}

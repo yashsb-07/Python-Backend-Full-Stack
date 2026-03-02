@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <header>
+        <h1>Student Registration Form</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="/action">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
+                    <br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
+                    <br>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" name="mail" id="mail" placeholder="Enter your email" required>
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" minlength="6" required>
+                    <br>
+                    <legend>Gender: </legend>
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">Other</label>
+                    <br>
+                    <label for="address">Address:</label><br>
+                    <textarea name="address" id="address" rows="5"></textarea>
+                    <br>
+                    <label for="birthdate">Birth-Date:</label>
+                    <input type="date" name="birthdate" id="birthdate">
+
+                </fieldset>
+                <fieldset>
+                    <legend>Skills</legend>
+                     <input type="checkbox" id="html" name="skills" value="html">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css" name="skills" value="css">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="js" name="skills" value="js">
+                    <label for="js">JS</label>
+                    <input type="checkbox" id="python" name="skills" value="python">
+                    <label for="python">Python</label>
+                    <br>
+                    <label for="resume">Upload your resume:</label>
+                    <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx">
+                </fieldset>
+                <fieldset>
+                    <legend>Department</legend>
+                    <label for="department">Department: </label>
+                    <select name="department" id="department" required>
+                    <option value="">Select your department</option>
+                    <option value="computer">Computer</option>
+                    <option value="it">IT</option>
+                    <option value="ai">AI</option>
+                    <option value="data science">Data science</option>
+                    </select>
+                </fieldset>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Yash Bansode. All rights reserved.</p>
+    </footer>
+</body>
+</html>

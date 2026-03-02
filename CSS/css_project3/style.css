@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+
+#pricing {
+   background-color: #FFFFFF;
+   padding: 20px;
+   text-align: center;
+}
+
+#pricing > h1 {
+   letter-spacing: 2px;
+   color: #003366;
+}
+
+.old-price {
+   text-decoration: line-through;
+   color: #888888;
+}
+
+.new-price {
+   font-size: 1.8rem;
+   font-weight: bold;
+   color: #B22222;
+}
+
+#pricing ul li {
+   margin: 8px 0;
+}
+
+button[type="button"] {
+   background-color: #003366;
+   color: white;
+   font-weight: bold;
+}
