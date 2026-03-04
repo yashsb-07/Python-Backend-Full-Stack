@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+}
+
+div {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#container {
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+
+}
+
+#box1{
+    background-color: aqua;
+}
+
+#box2{
+    background-color: yellowgreen;
+}
+
+#box3{
+    background-color: brown;
+}
+
+#box4{
+    background-color: chocolate;
+}
+
+#box5{
+    background-color: crimson;
+}
