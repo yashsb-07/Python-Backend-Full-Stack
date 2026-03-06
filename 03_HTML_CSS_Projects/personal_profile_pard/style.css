@@ -1,0 +1,62 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-card{
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.img{
+    height: 200px;
+    background-image: url(imgs/profile\ photo.jpg);
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.role{
+    color: gray;
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+.bio{
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.social{
+    margin: 15px 0 20px 0;
+}
+
+.social > a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 8px;
+    color:white ;
+    background-color: #0077b5;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.social a:hover{
+    background-color: #005582;
+}
+
+.social a:last-child{
+    background-color: black;
+}
+
+.social a:last-child:hover{
+    background-color: darkslategray;
+}
+
