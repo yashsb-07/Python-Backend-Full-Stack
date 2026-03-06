@@ -22,7 +22,7 @@ Frontend
 HTML5
 CSS3
 Responsive Design
-JavaScript (later
+JavaScript (later)
 Bootstrap (later)
 
 Backend
