@@ -65,6 +65,7 @@ body{
 
 .social a:hover{
     background-color: #005582;
+    transform: scale(1.05);
 }
 
 .social a:last-child{
