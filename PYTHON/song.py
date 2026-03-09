@@ -1,5 +1,11 @@
 import sys
 import time
+import pygame
+
+def play_song():
+    pygame.mixer.init()
+    pygame.mixer.music.load("D:\My-Projects\Python Full-Stack\PYTHON\Finding Her.mp3")  
+    pygame.mixer.music.play()
 
 def print_lyrics():
     lyrics = [
@@ -26,4 +32,8 @@ def print_lyrics():
         print()
         time.sleep(delays[i])
     
+play_song()
 print_lyrics()
+
+while pygame.mixer.music.get_busy():
+    time.sleep(1)
