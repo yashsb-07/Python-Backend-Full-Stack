@@ -25,29 +25,73 @@
 
 #Login system with retry limit
 
-correct_username = "yashsb07"
-correct_password = "Yash@123"
+# correct_username = "yashsb07"
+# correct_password = "Yash@123"
 
-attempts = 0
-max_attempts = 3
+# attempts = 0
+# max_attempts = 3
 
-while attempts < max_attempts:
+# while attempts < max_attempts:
 
-    username = input("Enter username: ")
-    password = input("Enter password: ")
+#     username = input("Enter username: ")
+#     password = input("Enter password: ")
 
-    attempts += 1
+#     attempts += 1
 
-    if username == correct_username and password == correct_password:
-        print("Access Granted!")
+#     if username == correct_username and password == correct_password:
+#         print("Access Granted!")
+#         break
+
+#     else:
+#         if attempts < max_attempts:
+#             remaining_attempts = max_attempts - attempts
+#             print("Access denied! Try again.")
+#             print(f"Attempts left: {remaining_attempts}")
+#         else:
+#             print("Account locked.")
+
+#ATM Menu System Program
+
+balance = 1000
+
+print("Welcome to the Bank ATM.")
+
+while True:
+
+    print("\n1. Check Balance")
+    print("2. Deposit Amount")
+    print("3. Withdraw Amount")
+    print("4. Exit")
+
+    choice = int(input("\nEnter your choice: "))
+
+    if choice == 1:
+        print(f"Available balance: ₹{balance}")
+
+    elif choice == 2:
+        amt = int(input("Enter deposit amount: "))
+        if amt <= 0:
+            print("Invalid amount.")
+        else:
+            balance += amt
+            print(f"₹{amt} deposited successfully!")
+
+    elif choice == 3:
+        amt = int(input("Enter withdraw amount: "))
+        if amt <= 0:
+            print("Invalid amount.")
+        elif amt > balance:
+            print("Insufficient balance!")
+        else:
+            balance -= amt
+            print(f"₹{amt} withdrawn successfully!")
+
+    elif choice == 4:
+        print("Thank you for using ATM.")
         break
 
     else:
-        if attempts < max_attempts:
-            remaining_attempts = max_attempts - attempts
-            print("Access denied! Try again.")
-            print(f"Attempts left: {remaining_attempts}")
-        else:
-            print("Account locked.")
+        print("Invalid choice. Please select 1–4.")
+    
         
     
