@@ -52,46 +52,43 @@
 
 #ATM Menu System Program
 
-balance = 1000
+# balance = 1000
 
-print("Welcome to the Bank ATM.")
+# print("Welcome to the Bank ATM.")
 
-while True:
+# while True:
 
-    print("\n1. Check Balance")
-    print("2. Deposit Amount")
-    print("3. Withdraw Amount")
-    print("4. Exit")
+#     print("\n1. Check Balance")
+#     print("2. Deposit Amount")
+#     print("3. Withdraw Amount")
+#     print("4. Exit")
 
-    choice = int(input("\nEnter your choice: "))
+#     choice = int(input("\nEnter your choice: "))
 
-    if choice == 1:
-        print(f"Available balance: ₹{balance}")
+#     if choice == 1:
+#         print(f"Available balance: ₹{balance}")
 
-    elif choice == 2:
-        amt = int(input("Enter deposit amount: "))
-        if amt <= 0:
-            print("Invalid amount.")
-        else:
-            balance += amt
-            print(f"₹{amt} deposited successfully!")
+#     elif choice == 2:
+#         amt = int(input("Enter deposit amount: "))
+#         if amt <= 0:
+#             print("Invalid amount.")
+#         else:
+#             balance += amt
+#             print(f"₹{amt} deposited successfully!")
 
-    elif choice == 3:
-        amt = int(input("Enter withdraw amount: "))
-        if amt <= 0:
-            print("Invalid amount.")
-        elif amt > balance:
-            print("Insufficient balance!")
-        else:
-            balance -= amt
-            print(f"₹{amt} withdrawn successfully!")
+#     elif choice == 3:
+#         amt = int(input("Enter withdraw amount: "))
+#         if amt <= 0:
+#             print("Invalid amount.")
+#         elif amt > balance:
+#             print("Insufficient balance!")
+#         else:
+#             balance -= amt
+#             print(f"₹{amt} withdrawn successfully!")
 
-    elif choice == 4:
-        print("Thank you for using ATM.")
-        break
+#     elif choice == 4:
+#         print("Thank you for using ATM.")
+#         break
 
-    else:
-        print("Invalid choice. Please select 1–4.")
-    
-        
-    
+#     else:
+#         print("Invalid choice. Please select 1–4.")
