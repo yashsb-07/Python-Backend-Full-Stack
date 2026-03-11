@@ -96,57 +96,57 @@
 
 #Shopping Cart
 
-cart = []
+# cart = []
 
-print("Welcome to the Super Market!")
+# print("Welcome to the Super Market!")
 
-while True:
+# while True:
 
-    print("\n1. Add item")
-    print("2. View cart")
-    print("3. Remove item")
-    print("4. Total items")
-    print("5. Exit")
+#     print("\n1. Add item")
+#     print("2. View cart")
+#     print("3. Remove item")
+#     print("4. Total items")
+#     print("5. Exit")
 
-    choice = input("\nEnter your choice: ")
+#     choice = input("\nEnter your choice: ")
 
-    if not choice.isdigit():
-        print("Please enter a valid number.")
-        continue
+#     if not choice.isdigit():
+#         print("Please enter a valid number.")
+#         continue
 
-    choice = int(choice)
+#     choice = int(choice)
 
-    if choice == 1:
-        item = input("Enter item name: ")
-        cart.append(item)
-        print(f"'{item}' added to cart!")
+#     if choice == 1:
+#         item = input("Enter item name: ")
+#         cart.append(item)
+#         print(f"'{item}' added to cart!")
 
-    elif choice == 2:
-        if not cart:
-            print("Cart is empty!")
-        else:
-            print("\nYour Cart:")
-            for i, item in enumerate(cart, start=1):
-                print(f"{i}. {item}")
+#     elif choice == 2:
+#         if not cart:
+#             print("Cart is empty!")
+#         else:
+#             print("\nYour Cart:")
+#             for i, item in enumerate(cart, start=1):
+#                 print(f"{i}. {item}")
 
-    elif choice == 3:
-        if not cart:
-            print("No items in cart to remove.")
-        else:
-            item_index = int(input("Enter item number: "))
+#     elif choice == 3:
+#         if not cart:
+#             print("No items in cart to remove.")
+#         else:
+#             item_index = int(input("Enter item number: "))
 
-            if 1 <= item_index <= len(cart):
-                removed_item = cart.pop(item_index - 1)
-                print(f"'{removed_item}' removed from cart!")
-            else:
-                print("Invalid item number.")
+#             if 1 <= item_index <= len(cart):
+#                 removed_item = cart.pop(item_index - 1)
+#                 print(f"'{removed_item}' removed from cart!")
+#             else:
+#                 print("Invalid item number.")
 
-    elif choice == 4:
-        print(f"Total items in cart: {len(cart)}")
+#     elif choice == 4:
+#         print(f"Total items in cart: {len(cart)}")
 
-    elif choice == 5:
-        print("Thank you for shopping. Have a great day!")
-        break
+#     elif choice == 5:
+#         print("Thank you for shopping. Have a great day!")
+#         break
 
-    else:
-        print("Invalid choice! Choose between 1-5.")
+#     else:
+#         print("Invalid choice! Choose between 1-5.")
