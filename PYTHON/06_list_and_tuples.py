@@ -45,51 +45,108 @@
 
 #Students Marks Manager
 
-marks = []
+# marks = []
 
-print("Welcome to the student marks manager system")
+# print("Welcome to the student marks manager system")
+
+# while True:
+
+#     print("\n1. Show all marks")
+#     print("2. Add student marks")
+#     print("3. Show highest marks")
+#     print("4. Show average marks")
+#     print("5. Exit")
+
+#     choice = int(input("\nEnter your choice: "))
+
+#     if choice == 1:
+#         if not marks:
+#             print("Marks are not available.")
+#         else:
+#             for i, mark in enumerate(marks, start=1):
+#                 print(f"Student {i}: {mark}")
+
+#     elif choice == 2:
+#         student_marks = int(input("Enter marks: "))
+#         if 0 <= student_marks <= 100:
+#             marks.append(student_marks)
+#             print("Marks added successfully!")
+#         else:
+#             print("Please enter marks between 0 and 100.")
+
+#     elif choice == 3:
+#         if not marks:
+#             print("No marks are available.")
+#         else:
+#             print(f"Highest marks: {max(marks)}")
+
+#     elif choice == 4:
+#         if not marks:
+#             print("Marks are not available.")
+#         else:
+#             avg = sum(marks) / len(marks)
+#             print(f"Average marks: {avg:.2f}")
+
+#     elif choice == 5:
+#         print("Thank you!")
+#         break
+
+#     else:
+#         print("Please enter a valid choice.")
+
+#Shopping Cart
+
+cart = []
+
+print("Welcome to the Super Market!")
 
 while True:
 
-    print("\n1. Show all marks")
-    print("2. Add student marks")
-    print("3. Show highest marks")
-    print("4. Show average marks")
+    print("\n1. Add item")
+    print("2. View cart")
+    print("3. Remove item")
+    print("4. Total items")
     print("5. Exit")
 
-    choice = int(input("\nEnter your choice: "))
+    choice = input("\nEnter your choice: ")
+
+    if not choice.isdigit():
+        print("Please enter a valid number.")
+        continue
+
+    choice = int(choice)
 
     if choice == 1:
-        if not marks:
-            print("Marks are not available.")
-        else:
-            for i, mark in enumerate(marks, start=1):
-                print(f"Student {i}: {mark}")
+        item = input("Enter item name: ")
+        cart.append(item)
+        print(f"'{item}' added to cart!")
 
     elif choice == 2:
-        student_marks = int(input("Enter marks: "))
-        if 0 <= student_marks <= 100:
-            marks.append(student_marks)
-            print("Marks added successfully!")
+        if not cart:
+            print("Cart is empty!")
         else:
-            print("Please enter marks between 0 and 100.")
+            print("\nYour Cart:")
+            for i, item in enumerate(cart, start=1):
+                print(f"{i}. {item}")
 
     elif choice == 3:
-        if not marks:
-            print("No marks are available.")
+        if not cart:
+            print("No items in cart to remove.")
         else:
-            print(f"Highest marks: {max(marks)}")
+            item_index = int(input("Enter item number: "))
+
+            if 1 <= item_index <= len(cart):
+                removed_item = cart.pop(item_index - 1)
+                print(f"'{removed_item}' removed from cart!")
+            else:
+                print("Invalid item number.")
 
     elif choice == 4:
-        if not marks:
-            print("Marks are not available.")
-        else:
-            avg = sum(marks) / len(marks)
-            print(f"Average marks: {avg:.2f}")
+        print(f"Total items in cart: {len(cart)}")
 
     elif choice == 5:
-        print("Thank you!")
+        print("Thank you for shopping. Have a great day!")
         break
 
     else:
-        print("Please enter a valid choice.")
+        print("Invalid choice! Choose between 1-5.")
