@@ -2,6 +2,17 @@ body{
     margin:0;
     font-family:'Poppins', sans-serif;
     background:#f4f4f4;
+    scroll-behavior: smooth;
+}
+
+.progress-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:5px;
+    width:0%;
+    background:#667eea;
+    z-index:1000;
 }
 
 header{
@@ -32,6 +43,7 @@ header p{
     background: white;
     padding: 20px;
     border-radius: 10px;
+    max-width: 700px;
 }
 
 .content h2{
@@ -95,6 +107,8 @@ time{
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    position: sticky;
+    top: 20px;
 }
 
 .sidebar h2{
