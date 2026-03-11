@@ -1,3 +1,5 @@
+"""List"""
+
 #To-Do list manager
 
 # task = []
@@ -150,3 +152,64 @@
 
 #     else:
 #         print("Invalid choice! Choose between 1-5.")
+
+"""Tuples"""
+
+#Student result system
+
+students_result = []
+
+print("Welcome to the Student Result System")
+
+while True:
+
+    print("\n1. Add student result")
+    print("2. View all results")
+    print("3. Show topper")
+    print("4. Exit")
+
+    choice = input("\nEnter your choice: ")
+
+    if not choice.isdigit():
+        print("Enter a valid choice.")
+        continue
+
+    choice = int(choice)
+
+    if choice == 1:
+        name = input("Enter student name: ")
+
+        marks_input = input("Enter student marks: ")
+        if not marks_input.isdigit():
+            print("Marks must be a number.")
+            continue
+
+        marks = int(marks_input)
+
+        students_result.append((name, marks))
+        print("Student result added successfully.")
+
+    elif choice == 2:
+        if not students_result:
+            print("No student results available!")
+        else:
+            print("\nStudent Results:")
+            for i, (name, marks) in enumerate(students_result, start=1):
+                print(f"{i}. {name} - {marks}")
+
+    elif choice == 3:
+        if not students_result:
+            print("No results available to find topper.")
+        else:
+            topper = max(students_result, key=lambda x: x[1])
+            print(f"Topper: {topper[0]} ({topper[1]})")
+
+    elif choice == 4:
+        print("Exiting program. Goodbye!")
+        break
+
+    else:
+        print("Invalid choice! Choose between 1-4.")
+
+    
+    

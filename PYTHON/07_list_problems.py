@@ -35,19 +35,19 @@
 
 #Pass and Fail student list
 
-marks = [85, 90, 78, 92, 88]
+# marks = [85, 90, 78, 92, 88]
 
-pass_students = []
-fail_student = []
+# pass_students = []
+# fail_student = []
 
-for mark in marks:
-    if mark > 80:
-        pass_students.append(mark)
-    else:
-        fail_student.append(mark)
+# for mark in marks:
+#     if mark > 80:
+#         pass_students.append(mark)
+#     else:
+#         fail_student.append(mark)
 
-print(f"Pass students: {pass_students}")
-print(f"Fail Students: {fail_student}")
+# print(f"Pass students: {pass_students}")
+# print(f"Fail Students: {fail_student}")
 
 
 
