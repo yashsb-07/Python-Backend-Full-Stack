@@ -54,69 +54,147 @@
 
 #Contact Book
 
-contacts = {}
+# contacts = {}
+
+# while True:
+
+#     print("\n1. Add contact")
+#     print("2. View contact")
+#     print("3. Search contact")
+#     print("4. Delete contact")
+#     print("5. Exit")
+
+#     choice = input("\nEnter your choice: ")
+
+#     if not choice.isdigit():
+#         print("Please enter valid choice.")
+#         continue
+
+#     choice = int(choice)
+
+#     if choice == 1:
+#         name = input("Enter name: ").strip()
+#         phone = input("Enter phone: ").strip()
+
+#         if not phone.isdigit():
+#             print("Please enter valid phone number.")
+#             continue
+
+#         key = name.lower()
+
+#         if key in contacts:
+#             print("Contact already exists!")
+#         else:
+#             contacts[key] = {"name": name, "phone": phone}
+#             print("Contact added!")
+
+#     elif choice == 2:
+#         if not contacts:
+#             print("Contact book is empty.")
+#         else:
+#             print("\nContacts:")
+#             for contact in contacts.values():
+#                 print(f"{contact['name']} : {contact['phone']}")
+
+#     elif choice == 3:
+#         name = input("Enter name to search: ").strip().lower()
+
+#         if name in contacts:
+#             contact = contacts[name]
+#             print(f"{contact['name']} : {contact['phone']}")
+#         else:
+#             print("Contact not found!")
+
+#     elif choice == 4:
+#         name = input("Enter name to delete: ").strip().lower()
+
+#         if name in contacts:
+#             del contacts[name]
+#             print("Contact removed!")
+#         else:
+#             print("Contact not found!")
+
+#     elif choice == 5:
+#         print("Good bye!")
+#         break
+    
+#     else:
+#         print("Please enter valid choice between 1-5")
+
+#Inventory Management System
+
+inventory = {}
 
 while True:
 
-    print("\n1. Add contact")
-    print("2. View contact")
-    print("3. Search contact")
-    print("4. Delete contact")
+    print("\n1. Add Product")
+    print("2. View Inventory")
+    print("3. Update Quantity")
+    print("4. Remove Product")
     print("5. Exit")
 
     choice = input("\nEnter your choice: ")
 
     if not choice.isdigit():
-        print("Please enter valid choice.")
+        print("Please enter a valid choice.")
         continue
 
     choice = int(choice)
 
     if choice == 1:
-        name = input("Enter name: ").strip()
-        phone = input("Enter phone: ").strip()
+        product_name = input("Enter product name: ").strip().lower()
+        quantity = input("Enter product quantity: ")
 
-        if not phone.isdigit():
-            print("Please enter valid phone number.")
+        if not quantity.isdigit():
+            print("Quantity must be a number.")
             continue
 
-        key = name.lower()
+        quantity = int(quantity)
 
-        if key in contacts:
-            print("Contact already exists!")
+        if product_name in inventory:
+            print("Product already exists!")
         else:
-            contacts[key] = {"name": name, "phone": phone}
-            print("Contact added!")
+            inventory[product_name] = {
+                "name": product_name,
+                "quantity": quantity
+            }
+            print("Product added!")
 
     elif choice == 2:
-        if not contacts:
-            print("Contact book is empty.")
+        if not inventory:
+            print("Inventory is empty!")
         else:
-            print("\nContacts:")
-            for contact in contacts.values():
-                print(f"{contact['name']} : {contact['phone']}")
+            print("\nInventory:")
+            for i, item in enumerate(inventory.values(), start=1):
+                print(f"{i}. {item['name']} : {item['quantity']}")
 
     elif choice == 3:
-        name = input("Enter name to search: ").strip().lower()
+        product_name = input("Enter product name to update: ").strip().lower()
 
-        if name in contacts:
-            contact = contacts[name]
-            print(f"{contact['name']} : {contact['phone']}")
+        if product_name in inventory:
+            new_quantity = input("Enter new quantity: ")
+
+            if not new_quantity.isdigit():
+                print("Quantity must be a number.")
+                continue
+
+            inventory[product_name]["quantity"] = int(new_quantity)
+            print("Quantity updated!")
         else:
-            print("Contact not found!")
+            print("Product not found!")
 
     elif choice == 4:
-        name = input("Enter name to delete: ").strip().lower()
+        product_name = input("Enter product name to remove: ").strip().lower()
 
-        if name in contacts:
-            del contacts[name]
-            print("Contact removed!")
+        if product_name in inventory:
+            del inventory[product_name]
+            print("Product removed!")
         else:
-            print("Contact not found!")
+            print("Product not found!")
 
     elif choice == 5:
-        print("Good bye!")
+        print("Thank you!")
         break
-    
+
     else:
-        print("Please enter valid choice between 1-5")
+        print("Please enter a valid choice between 1–5.")
