@@ -206,120 +206,152 @@ students = {}
 
 while True:
 
-    print("\n1. Add student")
-    print("2. View student")
+    print("\n====== STUDENT DATABASE SYSTEM ======")
+    print("1. Add student")
+    print("2. View students")
     print("3. Search student")
     print("4. Update student")
     print("5. Delete student")
     print("6. Exit")
 
-    choice = input("\nEnter your choice: ")
+    choice = input("\nEnter your choice: ").strip()
 
     if not choice.isdigit():
-        print("Please enter valid choice.")
+        print("Please enter a valid number.")
         continue
 
     choice = int(choice)
 
+    # ================= ADD STUDENT =================
     if choice == 1:
-        student_id = input("Enter student id: ")
+
+        student_id = input("Enter student ID: ").strip()
 
         if not student_id.isdigit():
-            print("Id must be an integer value.")
+            print("Student ID must be a number.")
             continue
 
         student_id = int(student_id)
 
-        student_name = input("Enter student name: ").strip().lower()
-
-        if not student_name.replace("", "").isalpha():
-            print("Name conatin only letters")
+        if student_id in students:
+            print("Student ID already exists!")
             continue
-        
-        student_marks = input("Enter student marks: ")
 
-        if not student_marks.isdigit():
+        name = input("Enter student name: ").strip()
+
+        if not name.replace(" ", "").isalpha():
+            print("Name must contain only letters.")
+            continue
+
+        marks = input("Enter student marks: ").strip()
+
+        if not marks.isdigit():
             print("Marks must be a number.")
             continue
 
-        student_marks = int(student_marks)
+        marks = int(marks)
 
-        if student_id in students:
-            print("Student id must be unique.")
-        else:
-            students[student_id] = {
-                "name" : student_name,
-                "marks" : student_marks
-            }
-            print("Student added succesfully!")
+        if marks < 0 or marks > 100:
+            print("Marks must be between 0 and 100.")
+            continue
 
+        students[student_id] = {
+            "name": name,
+            "marks": marks
+        }
+
+        print("Student added successfully!")
+
+    # ================= VIEW STUDENTS =================
     elif choice == 2:
+
         if not students:
-            print("No data available.")
+            print("No students found.")
         else:
-            print("\nStudents: ")
-            for sid, data in students.items():
-                print(f"ID: {sid} | Name: {data['name']} | Marks: {data['marks']}")
-        
+            print("\nStudents:\n")
+
+            for i, (sid, data) in enumerate(students.items(), start=1):
+                print(f"{i}. ID: {sid} | Name: {data['name']} | Marks: {data['marks']}")
+
+            print(f"\nTotal students: {len(students)}")
+
+    # ================= SEARCH STUDENT =================
     elif choice == 3:
-        student_id = input("Enter student id to search: ")
 
-        if not student_id.isdigit():
-            print("Invalid id.")
+        sid = input("Enter student ID to search: ").strip()
+
+        if not sid.isdigit():
+            print("Invalid ID.")
             continue
-        
-        student_id = int(student_id)
 
-        if student_id in students:
-            student = students[student_id]
-            print(f"ID: {student_id} | Name: {student['name']} | Marks: {student['marks']}")
+        sid = int(sid)
+
+        if sid in students:
+            student = students[sid]
+            print(f"\nID: {sid} | Name: {student['name']} | Marks: {student['marks']}")
         else:
             print("Student not found.")
 
+    # ================= UPDATE STUDENT =================
     elif choice == 4:
-        student_id = input("Enter student id to update: ")
 
-        if not student_id.isdigit():
-            print("Invalid id.")
+        sid = input("Enter student ID to update: ").strip()
+
+        if not sid.isdigit():
+            print("Invalid ID.")
             continue
 
-        student_id = int(student_id)
+        sid = int(sid)
 
-        if student_id in students:
-            new_name = input("Update student name: ").strip().lower()
-            new_marks = input("Update student marks: ")
-
-            if not new_marks.isdigit():
-                print("Marks must be a number.")
-                continue
-
-            students[student_id]['name'] = new_name
-            students[student_id]['marks'] = int(new_marks)
-
-            print("Student updated succesfully!")
-            
-        else:
+        if sid not in students:
             print("Student not found.")
+            continue
 
+        new_name = input("Enter new name: ").strip()
+
+        if not new_name.replace(" ", "").isalpha():
+            print("Name must contain only letters.")
+            continue
+
+        new_marks = input("Enter new marks: ").strip()
+
+        if not new_marks.isdigit():
+            print("Marks must be a number.")
+            continue
+
+        new_marks = int(new_marks)
+
+        if new_marks < 0 or new_marks > 100:
+            print("Marks must be between 0 and 100.")
+            continue
+
+        students[sid]["name"] = new_name
+        students[sid]["marks"] = new_marks
+
+        print("Student updated successfully!")
+
+    # ================= DELETE STUDENT =================
     elif choice == 5:
-        student_id = input("Enter student id to delete: ")
 
-        if not student_id.isdigit():
-            print("Enter valid id.")
+        sid = input("Enter student ID to delete: ").strip()
+
+        if not sid.isdigit():
+            print("Invalid ID.")
             continue
 
-        student_id = int(student_id)
+        sid = int(sid)
 
-        if student_id in students:
-            del students[student_id]
-            print("Student deleted succesfully!")
+        if sid in students:
+            del students[sid]
+            print("Student deleted successfully!")
         else:
             print("Student not found.")
 
+    # ================= EXIT =================
     elif choice == 6:
-        print("Exiting program..")
+        print("Exiting program...")
         break
 
     else:
-        print("Invalid choice. Please try again!")
+        print("Invalid choice. Please select between 1 and 6.")
 
