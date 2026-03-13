@@ -123,78 +123,203 @@
 
 #Inventory Management System
 
-inventory = {}
+# inventory = {}
+
+# while True:
+
+#     print("\n1. Add Product")
+#     print("2. View Inventory")
+#     print("3. Update Quantity")
+#     print("4. Remove Product")
+#     print("5. Exit")
+
+#     choice = input("\nEnter your choice: ")
+
+#     if not choice.isdigit():
+#         print("Please enter a valid choice.")
+#         continue
+
+#     choice = int(choice)
+
+#     if choice == 1:
+#         product_name = input("Enter product name: ").strip().lower()
+#         quantity = input("Enter product quantity: ")
+
+#         if not quantity.isdigit():
+#             print("Quantity must be a number.")
+#             continue
+
+#         quantity = int(quantity)
+
+#         if product_name in inventory:
+#             print("Product already exists!")
+#         else:
+#             inventory[product_name] = {
+#                 "name": product_name,
+#                 "quantity": quantity
+#             }
+#             print("Product added!")
+
+#     elif choice == 2:
+#         if not inventory:
+#             print("Inventory is empty!")
+#         else:
+#             print("\nInventory:")
+#             for i, item in enumerate(inventory.values(), start=1):
+#                 print(f"{i}. {item['name']} : {item['quantity']}")
+
+#     elif choice == 3:
+#         product_name = input("Enter product name to update: ").strip().lower()
+
+#         if product_name in inventory:
+#             new_quantity = input("Enter new quantity: ")
+
+#             if not new_quantity.isdigit():
+#                 print("Quantity must be a number.")
+#                 continue
+
+#             inventory[product_name]["quantity"] = int(new_quantity)
+#             print("Quantity updated!")
+#         else:
+#             print("Product not found!")
+
+#     elif choice == 4:
+#         product_name = input("Enter product name to remove: ").strip().lower()
+
+#         if product_name in inventory:
+#             del inventory[product_name]
+#             print("Product removed!")
+#         else:
+#             print("Product not found!")
+
+#     elif choice == 5:
+#         print("Thank you!")
+#         break
+
+#     else:
+#         print("Please enter a valid choice between 1–5.")
+
+
+#Student Database System
+
+students = {}
 
 while True:
 
-    print("\n1. Add Product")
-    print("2. View Inventory")
-    print("3. Update Quantity")
-    print("4. Remove Product")
-    print("5. Exit")
+    print("\n1. Add student")
+    print("2. View student")
+    print("3. Search student")
+    print("4. Update student")
+    print("5. Delete student")
+    print("6. Exit")
 
     choice = input("\nEnter your choice: ")
 
     if not choice.isdigit():
-        print("Please enter a valid choice.")
+        print("Please enter valid choice.")
         continue
 
     choice = int(choice)
 
     if choice == 1:
-        product_name = input("Enter product name: ").strip().lower()
-        quantity = input("Enter product quantity: ")
+        student_id = input("Enter student id: ")
 
-        if not quantity.isdigit():
-            print("Quantity must be a number.")
+        if not student_id.isdigit():
+            print("Id must be an integer value.")
             continue
 
-        quantity = int(quantity)
+        student_id = int(student_id)
 
-        if product_name in inventory:
-            print("Product already exists!")
+        student_name = input("Enter student name: ").strip().lower()
+
+        if not student_name.replace("", "").isalpha():
+            print("Name conatin only letters")
+            continue
+        
+        student_marks = input("Enter student marks: ")
+
+        if not student_marks.isdigit():
+            print("Marks must be a number.")
+            continue
+
+        student_marks = int(student_marks)
+
+        if student_id in students:
+            print("Student id must be unique.")
         else:
-            inventory[product_name] = {
-                "name": product_name,
-                "quantity": quantity
+            students[student_id] = {
+                "name" : student_name,
+                "marks" : student_marks
             }
-            print("Product added!")
+            print("Student added succesfully!")
 
     elif choice == 2:
-        if not inventory:
-            print("Inventory is empty!")
+        if not students:
+            print("No data available.")
         else:
-            print("\nInventory:")
-            for i, item in enumerate(inventory.values(), start=1):
-                print(f"{i}. {item['name']} : {item['quantity']}")
-
+            print("\nStudents: ")
+            for sid, data in students.items():
+                print(f"ID: {sid} | Name: {data['name']} | Marks: {data['marks']}")
+        
     elif choice == 3:
-        product_name = input("Enter product name to update: ").strip().lower()
+        student_id = input("Enter student id to search: ")
 
-        if product_name in inventory:
-            new_quantity = input("Enter new quantity: ")
+        if not student_id.isdigit():
+            print("Invalid id.")
+            continue
+        
+        student_id = int(student_id)
 
-            if not new_quantity.isdigit():
-                print("Quantity must be a number.")
-                continue
-
-            inventory[product_name]["quantity"] = int(new_quantity)
-            print("Quantity updated!")
+        if student_id in students:
+            student = students[student_id]
+            print(f"ID: {student_id} | Name: {student['name']} | Marks: {student['marks']}")
         else:
-            print("Product not found!")
+            print("Student not found.")
 
     elif choice == 4:
-        product_name = input("Enter product name to remove: ").strip().lower()
+        student_id = input("Enter student id to update: ")
 
-        if product_name in inventory:
-            del inventory[product_name]
-            print("Product removed!")
+        if not student_id.isdigit():
+            print("Invalid id.")
+            continue
+
+        student_id = int(student_id)
+
+        if student_id in students:
+            new_name = input("Update student name: ").strip().lower()
+            new_marks = input("Update student marks: ")
+
+            if not new_marks.isdigit():
+                print("Marks must be a number.")
+                continue
+
+            students[student_id]['name'] = new_name
+            students[student_id]['marks'] = int(new_marks)
+
+            print("Student updated succesfully!")
+            
         else:
-            print("Product not found!")
+            print("Student not found.")
 
     elif choice == 5:
-        print("Thank you!")
+        student_id = input("Enter student id to delete: ")
+
+        if not student_id.isdigit():
+            print("Enter valid id.")
+            continue
+
+        student_id = int(student_id)
+
+        if student_id in students:
+            del students[student_id]
+            print("Student deleted succesfully!")
+        else:
+            print("Student not found.")
+
+    elif choice == 6:
+        print("Exiting program..")
         break
 
     else:
-        print("Please enter a valid choice between 1–5.")
+        print("Invalid choice. Please try again!")
+
