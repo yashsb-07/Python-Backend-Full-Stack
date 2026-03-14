@@ -10,12 +10,26 @@ body{
     padding: 20px 40px;
     background:rgba(51,51,51,0.9);
     color: white;
+
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(6px);
+    z-index:1000;
 }
 
 .nav-links{
     display: flex;
     list-style: none;
     gap: 20px;
+}
+
+.nav-links li{
+cursor:pointer;
+transition:0.3s;
+}
+
+.nav-links li:hover{
+color:#ffd369;
 }
 
 .hero{
@@ -51,6 +65,11 @@ body{
     border-radius: 10px;
     width: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
 }
 
 .pricing{
@@ -68,10 +87,15 @@ body{
 
 .price-card{
     background: #667eea;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     width: 200px;
     color: white;
+    transition: 0.3s;
+}
+
+.price-card:hover{
+    transform:scale(1.05);
 }
 
 .testimonials{
@@ -100,4 +124,27 @@ footer{
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+@media (max-width:768px){
+
+.nav-links{
+    display:none;
+}
+
+.feature-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.pricing-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.testimonial-container{
+    flex-direction:column;
+    align-items:center;
+}
+
 }
