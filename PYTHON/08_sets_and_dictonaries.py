@@ -202,6 +202,19 @@
 
 #Student Database System
 
+import json
+
+try:
+    with open("students.json", "r") as file:
+        students = json.load(file)
+        students = {int(k): v for k, v in students.items()}
+except FileNotFoundError:
+    students = {}
+
+def save_data():
+    with open("students.json", "w") as file:
+        json.dump(students, file, indent=4)
+
 students = {}
 
 while True:
@@ -259,6 +272,8 @@ while True:
             "name": name,
             "marks": marks
         }
+
+        save_data()
 
         print("Student added successfully!")
 
@@ -328,6 +343,8 @@ while True:
         students[sid]["name"] = new_name
         students[sid]["marks"] = new_marks
 
+        save_data()
+
         print("Student updated successfully!")
 
     # ================= DELETE STUDENT =================
@@ -343,6 +360,9 @@ while True:
 
         if sid in students:
             del students[sid]
+            
+            save_data()
+
             print("Student deleted successfully!")
         else:
             print("Student not found.")
