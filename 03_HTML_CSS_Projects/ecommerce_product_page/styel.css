@@ -12,6 +12,12 @@ max-width:1000px;
 margin:auto;
 background:white;
 border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.product-container:hover{
+transform:translateY(-5px);
 }
 
 .product-img img{
@@ -34,13 +40,35 @@ margin-bottom:20px;
 color:#555;
 }
 
+.rating{
+color:orange;
+margin-bottom:10px;
+}
+
+.quantity{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+.quantity button{
+padding:5px 10px;
+}
+
 button{
 padding:12px 25px;
 border:none;
 background:#667eea;
 color:white;
-border-radius:25px;
+border-radius:30px;
 cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
 }
 
 .details{
@@ -61,4 +89,12 @@ padding:20px;
 margin-top:15px;
 border-radius:8px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width:768px){
+
+.product-container{
+grid-template-columns:1fr;
+}
+
 }
