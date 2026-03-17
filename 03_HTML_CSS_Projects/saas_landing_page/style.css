@@ -11,6 +11,12 @@ body{
     color: white;
 }
 
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
 .hero{
     text-align: center;
     padding: 100px 20px;
