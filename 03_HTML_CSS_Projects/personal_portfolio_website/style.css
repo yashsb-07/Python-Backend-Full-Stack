@@ -32,20 +32,29 @@ body{
 }
 
 .hero{
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg,#667eea,#764ba2);
-    color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80vh;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    text-align:center;
+    flex-direction:column;
 }
 
-.hero button{
-    padding: 12px 25px;
-    border: none;
-    border-radius: 30px;
-    background-color: white;
-    cursor: pointer;
-    font-weight: 600;
+.hero-buttons button{
+    margin:10px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
     transition: 0.3s;
+}
+
+.secondary{
+    background:transparent;
+    border:2px solid white;
+    color:white;
 }
 
 .hero button:hover{
@@ -82,6 +91,18 @@ section{
     gap: 30px;
     margin-top: 30px;
 }
+
+.project-links{
+    margin-top:10px;
+}
+
+.project-links a{
+    margin:0 5px;
+    text-decoration:none;
+    color:#667eea;
+    font-weight:600;
+}
+
 
 .project-card{
     background: white;
