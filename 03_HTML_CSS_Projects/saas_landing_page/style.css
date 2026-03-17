@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 20px 40px;
+    color: white;
+}
+
+.hero{
+    text-align: center;
+    padding: 100px 20px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color: white;
+}
+
+.hero button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.features{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.feature-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature-card{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pricing{
+    padding: 60px;
+    text-align: center;
+}
+
+.pricing-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.price-card{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.popular{
+    border: 3px solid #667eea;
+}
+
+.testimonials{
+    padding: 60px;
+    text-align: center;
+}
+
+.testimonial{
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.cta{
+    text-align: center;
+    padding: 60px;
+    background: #667eea;
+    color: white;
+}
+
+footer{
+    background: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+
+}
