@@ -102,37 +102,49 @@
 
 /* Q1 */
 
-let day = 5
+// let day = 5
 
-switch(day) {
-    case 1:
-        console.log("Monday");
-        break;
+// switch(day) {
+//     case 1:
+//         console.log("Monday");
+//         break;
 
-    case 2:
-        console.log("Tuesday");
-        break;
+//     case 2:
+//         console.log("Tuesday");
+//         break;
 
-    case 3:
-        console.log("Wednsday");
-        break;
+//     case 3:
+//         console.log("Wednsday");
+//         break;
 
-    case 4:
-        console.log("Thursday");
-        break;
+//     case 4:
+//         console.log("Thursday");
+//         break;
 
-    case 5:
-        console.log("Friday");
-        break;
+//     case 5:
+//         console.log("Friday");
+//         break;
 
-    case 6:
-        console.log("Saturday");
-        break;
+//     case 6:
+//         console.log("Saturday");
+//         break;
 
-    case 7:
-        console.log("Sunday");
-        break;
+//     case 7:
+//         console.log("Sunday");
+//         break;
 
-    default:
-        console.log("Invalid day!")
-}
+//     default:
+//         console.log("Invalid day!")
+// }
+
+/* Alert and Prompt Messages */
+
+// alert("Something is wrong")
+
+let firstName = prompt("Enter your name: ")
+let lastName = prompt("Enter your last name: ")
+let msg = "Welcome" + " " + firstName + " " + lastName + "!"
+// console.log(msg)
+alert(msg)
+
+
