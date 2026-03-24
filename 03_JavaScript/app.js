@@ -58,16 +58,26 @@
 
 /* Nested if-else */
 
-let student_marks = 79
+// let student_marks = 79
 
-if (student_marks >= 35){
-    console.log("Pass")
+// if (student_marks >= 35){
+//     console.log("Pass")
     
-    if (student_marks >= 80){
-        console.log("Grade: A")
-    } else {
-        console.log("Grade: B")
-    }
-} else {
-    console.log("Better luck next time. ")
+//     if (student_marks >= 80){
+//         console.log("Grade: A")
+//     } else {
+//         console.log("Grade: B")
+//     }
+// } else {
+//     console.log("Better luck next time. ")
+// }
+
+/* Logical */
+
+let str = "banana"
+
+if ((str[0] === 'a') && (str.length >3)){
+    console.log("Good String");
+} else{
+    console.log("Not a good string");
 }
