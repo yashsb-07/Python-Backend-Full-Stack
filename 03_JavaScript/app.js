@@ -74,10 +74,28 @@
 
 /* Logical */
 
-let str = "banana"
+// let str = "banana"
 
-if ((str[0] === 'a') && (str.length >3)){
-    console.log("Good String");
-} else{
-    console.log("Not a good string");
+// if ((str[0] === 'a') && (str.length >3)){
+//     console.log("Good String");
+// } else{
+//     console.log("Not a good string");
+// }
+
+/* Switch Statements */
+
+let color = "yellow"
+
+switch(color){
+    case "red" :
+        console.log("Stop");
+        break;
+    case "yellow" :
+        console.log("Wait");
+        break;
+    case "green" :
+        console.log("GO");
+        break;
+    default:
+        console.log("Broken Light!")
 }
