@@ -84,18 +84,55 @@
 
 /* Switch Statements */
 
-let color = "yellow"
+// let color = "yellow"
 
-switch(color){
-    case "red" :
-        console.log("Stop");
+// switch(color){
+//     case "red" :
+//         console.log("Stop");
+//         break;
+//     case "yellow" :
+//         console.log("Wait");
+//         break;
+//     case "green" :
+//         console.log("GO");
+//         break;
+//     default:
+//         console.log("Broken Light!")
+// }
+
+/* Q1 */
+
+let day = 5
+
+switch(day) {
+    case 1:
+        console.log("Monday");
         break;
-    case "yellow" :
-        console.log("Wait");
+
+    case 2:
+        console.log("Tuesday");
         break;
-    case "green" :
-        console.log("GO");
+
+    case 3:
+        console.log("Wednsday");
         break;
+
+    case 4:
+        console.log("Thursday");
+        break;
+
+    case 5:
+        console.log("Friday");
+        break;
+
+    case 6:
+        console.log("Saturday");
+        break;
+
+    case 7:
+        console.log("Sunday");
+        break;
+
     default:
-        console.log("Broken Light!")
+        console.log("Invalid day!")
 }
