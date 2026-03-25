@@ -10,7 +10,7 @@
 
 /* Array Methods */
 
-let cars = ["BMW", "AUDI", "XUV", "TOYOTA", "PORSHE", "MERCEDES", "GWAGON"]
+// let cars = ["BMW", "AUDI", "XUV", "TOYOTA", "PORSHE", "MERCEDES", "GWAGON"]
 
 // console.log(cars)
 // console.log(cars.indexOf("XUV"));
@@ -23,7 +23,7 @@ let cars = ["BMW", "AUDI", "XUV", "TOYOTA", "PORSHE", "MERCEDES", "GWAGON"]
 // console.log(cars)
 // console.log(cars.splice(1, 1, "TATA NEXON", "TATA PUNCH"))
 // console.log(cars)
-console.log(cars.sort())
+// console.log(cars.sort())
 
 // let first = ["Yash", "Bansode"]
 // let second = ["Sakshi", "Kalkatte"]
