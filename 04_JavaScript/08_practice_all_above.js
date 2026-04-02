@@ -218,34 +218,53 @@
 
 /* 1. Find frequency of each character in a string */
 
-let str = "helloyash";
+// let str = "helloyash";
 
-let freq = {};
+// let freq = {};
 
-for (let char of str){
-    if (freq[char]){
-        freq[char]++;
-    } else {
-        freq[char] = 1;
-    }
-}
+// for (let char of str){
+//     if (freq[char]){
+//         freq[char]++;
+//     } else {
+//         freq[char] = 1;
+//     }
+// }
 
-console.log(freq);
+// console.log(freq);
 
 /* 2. Sort array without using .sort() */
 
-let arr = [5, 3, 8, 4, 2];
+// let arr = [5, 3, 8, 4, 2];
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length - 1; j++) {
-        if (arr[j] > arr[j + 1]) {
-            // swapg
-            let temp = arr[j];
-            arr[j] = arr[j + 1];
-            arr[j + 1] = temp;
-        }
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length - 1; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//             // swapg
+//             let temp = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = temp;
+//         }
+//     }
+// }
+
+// console.log(arr);
+
+/* 3. Merge two arrays without duplicates */
+
+let arr1 = [1, 2, 3];
+let arr2 = [2, 3, 4];
+
+let result = [];
+
+for (let i = 0; i < arr1.length; i++) {
+    result.push(arr1[i]);
+}
+
+for (let i = 0; i < arr2.length; i++) {
+    if (!result.includes(arr2[i])) {
+        result.push(arr2[i]);
     }
 }
 
-console.log(arr);
+console.log(result);
 
