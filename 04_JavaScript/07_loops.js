@@ -54,31 +54,33 @@
 
 /* Todo App */
 
-let todo = [];
+// let todo = [];
 
-let req = prompt("Enter your request: ")
+// let req = prompt("Enter your request: ")
 
-while(true){
-    if (req == "quit"){
-        console.log("Quitting app..");
-        break;
-    }
+// while(true){
+//     if (req == "quit"){
+//         console.log("Quitting app..");
+//         break;
+//     }
 
-    if (req == "add"){
-        let task = prompt("Please enter your task to add: ");
-        todo.push(task);
-        console.log("Task added.");
-    } else if (req == "list"){
-        console.log("----------")
-        for (let i = 0; i<todo.length; i++){
-            console.log(i, todo[i]);
-        }
-    } else if (req == "delete"){
-        let idx = prompt("Please enter task to delete: ");
-        todo.splice(idx, 1);
-        console.log("Task deleted.. ")
-    } else {
-        console.log("Wrond request.")
-    }
-}
+//     if (req == "add"){
+//         let task = prompt("Please enter your task to add: ");
+//         todo.push(task);
+//         console.log("Task added.");
+//     } else if (req == "list"){
+//         console.log("----------")
+//         for (let i = 0; i<todo.length; i++){
+//             console.log(i, todo[i]);
+//         }
+//     } else if (req == "delete"){
+//         let idx = prompt("Please enter task to delete: ");
+//         todo.splice(idx, 1);
+//         console.log("Task deleted.. ")
+//     } else {
+//         console.log("Wrond request.")
+//     }
+// }
+
+
 

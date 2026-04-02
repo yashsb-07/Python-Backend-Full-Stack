@@ -1,3 +1,5 @@
+/* Level 1 */
+
 /* Q1. Print numbers from 1 to 10 */
 
 // let numbers = [1,2,3,4,5,6,7,8,9,10]
@@ -210,3 +212,40 @@
 // console.log(`${n} * 8 = ${n * 8}`);
 // console.log(`${n} * 9 = ${n * 9}`);
 // console.log(`${n} * 10 = ${n * 10}`);
+
+
+/* Level 2 */
+
+/* 1. Find frequency of each character in a string */
+
+let str = "helloyash";
+
+let freq = {};
+
+for (let char of str){
+    if (freq[char]){
+        freq[char]++;
+    } else {
+        freq[char] = 1;
+    }
+}
+
+console.log(freq);
+
+/* 2. Sort array without using .sort() */
+
+let arr = [5, 3, 8, 4, 2];
+
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+            // swapg
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
+    }
+}
+
+console.log(arr);
+
