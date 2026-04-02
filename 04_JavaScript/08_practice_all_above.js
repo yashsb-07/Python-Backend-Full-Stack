@@ -251,20 +251,133 @@
 
 /* 3. Merge two arrays without duplicates */
 
-let arr1 = [1, 2, 3];
-let arr2 = [2, 3, 4];
+// let arr1 = [1, 2, 3];
+// let arr2 = [2, 3, 4];
 
-let result = [];
+// let result = [];
 
-for (let i = 0; i < arr1.length; i++) {
-    result.push(arr1[i]);
-}
+// for (let i = 0; i < arr1.length; i++) {
+//     result.push(arr1[i]);
+// }
 
-for (let i = 0; i < arr2.length; i++) {
-    if (!result.includes(arr2[i])) {
-        result.push(arr2[i]);
+// for (let i = 0; i < arr2.length; i++) {
+//     if (!result.includes(arr2[i])) {
+//         result.push(arr2[i]);
+//     }
+// }
+
+// console.log(result);
+
+/* 4. Find missing number in array (1–10) */
+
+// let arr = [1,2,3,4,5,6,7,9,10];
+
+// let totalSum = 55;
+// let arrSum = 0;
+
+// for (let i = 0; i < arr.length; i++){
+//     arrSum += arr[i];
+// }
+
+// let missingNum = totalSum - arrSum;
+
+// console.log(missingNum);
+
+/* 5. Convert first letter of each word to capital */
+
+// let str = "yash bansode";
+
+// let words = str.split(" ");
+
+// for (let i = 0; i < words.length; i++) {
+//     let word = words[i];
+//     words[i] = word.charAt(0).toUpperCase() + word.slice(1);
+// }
+
+// let result = words.join(" ");
+
+// console.log(result);
+
+/* 6. Find longest word in a sentence */
+
+// let str = "I am learning JavaScript programming";
+
+// let words = str.split(" ");
+
+// let longest = words[0];
+
+// for (let i = 1; i < words.length; i++) {
+//     if (words[i].length > longest.length) {
+//         longest = words[i];
+//     }
+// }
+
+// console.log(longest);
+
+/* 7. Count how many times a word appears in a sentence */
+
+// let str = "I like JS and I like CSS";
+// let target = "like";
+
+// let words = str.split(" ");
+// let count = 0;
+
+// for (let i = 0; i < words.length; i++) {
+//     if (words[i] === target) {
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+/* 8. Shuffle elements of array */
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i = arr.length - 1; i > 0; i--) {
+
+//     let j = Math.floor(Math.random() * (i + 1));
+
+//     // swap
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+// }
+
+// console.log(arr);
+
+/* 9. Find second largest number in array */
+
+// let arr = [10, 5, 8, 20, 15];
+
+// let largest = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//         largest = arr[i];
+//     }
+// }
+
+// let secondLargest = -Infinity;
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > secondLargest && arr[i] < largest) {
+//         secondLargest = arr[i];
+//     }
+// }
+
+// console.log(secondLargest);
+
+/* 10. Remove duplicates from array */
+
+let arr = [1, 2, 3, 2, 4, 3, 5];
+
+let unique = [];
+
+for (let i = 0; i < arr.length; i++) {
+    if (!unique.includes(arr[i])) {
+        unique.push(arr[i]);
     }
 }
 
-console.log(result);
-
+console.log(unique);
