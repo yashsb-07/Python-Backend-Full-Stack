@@ -370,14 +370,35 @@
 
 /* 10. Remove duplicates from array */
 
-let arr = [1, 2, 3, 2, 4, 3, 5];
+// let arr = [1, 2, 3, 2, 4, 3, 5];
 
-let unique = [];
+// let unique = [];
 
-for (let i = 0; i < arr.length; i++) {
-    if (!unique.includes(arr[i])) {
-        unique.push(arr[i]);
+// for (let i = 0; i < arr.length; i++) {
+//     if (!unique.includes(arr[i])) {
+//         unique.push(arr[i]);
+//     }
+// }
+
+// console.log(unique);
+
+/* 11. Guessing Game */
+const max = prompt("Enter the max num: ");
+const random = Math.floor(Math.random() * max) + 1;
+let guess = prompt("Enter your guess num: ");
+
+while (true){
+    if(guess == "quit"){
+        console.log("User quit..!")
+        break;
+    } 
+
+    if(guess == random){
+        console.log("Congratulations your guess is correct!");
+        break;
+    } else if (guess < random){
+        guess = prompt("Hint: your guess was too small!");
+    } else {
+        guess = prompt("Hint: your guess was too large!")
     }
 }
-
-console.log(unique);
