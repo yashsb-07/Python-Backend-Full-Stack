@@ -17,7 +17,7 @@ while (True):
     choice = int(choice)
 
     if choice == 5:
-        print("Existing calculator..")
+        print("Exiting calculator..")
         break
 
     a = float(input("Enter first number: "))
