@@ -12,7 +12,7 @@ while (True):
 
     if not choice.isdigit():
         print("Please enter valid choice!")
-        break
+        continue
     
     choice = int(choice)
 
