@@ -1,7 +1,12 @@
 contacts = {}
 
 def add_contact():
-    name = input("Enter name: ")
+    name = input("Enter name: ").strip()
+
+    if name in contacts:
+        print("Contact already exists.")
+        return
+
     phone = input("Enter phone number: ")
     email = input("Enter email: ")
 
@@ -17,22 +22,35 @@ def view_contact():
         print("No contact found.")
         return
 
+    print("\nCONTACT LIST")
+    print("-" * 40)
+
     for name, details in contacts.items():
         print("\nName:", name)
         print("Phone:", details["phone"])
         print("Email:", details["email"])
+        print("-" * 40)
 
 def search_contact():
-    name = input("Enter contact name to search: ")
+    search = input("Enter contact name to search: ").lower()
+    found = False
 
-    if name in contacts:
-        print("Phone:", contacts[name]["phone"])
-        print("Email:", contacts[name]["email"])
-    else:
+    print("\nSearch Results")
+    print("-" * 40)
+
+    for name, details in contacts.items():
+        if search in name.lower():
+            print(f"Name: {name}")
+            print("Phone:", contacts[name]["phone"])
+            print("Email:", contacts[name]["email"])
+            print("-" * 40)
+            found = True
+
+    if not found:
         print("Contact not found.")
 
 def update_contact():
-    name = input("Enter contact name to update: ")
+    name = input("Enter contact name to update: ").strip()
 
     if name in contacts:
         phone = input("Enter new phone number: ")
@@ -49,8 +67,13 @@ def delete_contact():
     name = input("Enter contact name to delete: ")
 
     if name in contacts:
-        del contacts[name]
-        print("Contact deleted successfully!")
+        confirm = input("Are you sure? (y/n): ").lower()
+
+        if confirm == "y":
+            del contacts[name]
+            print("Contact deleted successfully!")
+        else:
+            print("Deletion cancled.")
     else:
         print("Contact not found.")
 
