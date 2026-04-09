@@ -1,103 +1,122 @@
-contacts = {}
+import json
 
 def load_contacts():
-    try: 
-        with open ("contacts.txt", "r") as f:
-            for line in f:
-                name, phone, email = line.strip().split(",")
-                contacts[name] = {
-                    "phone": phone,
-                    "email": email
-                }
+    global contacts
+    try:
+        with open("contacts.json", "r") as f:
+            contacts = json.load(f)
     except FileNotFoundError:
-        pass
+        contacts = {}
 
 def save_contacts():
-    with open ("contacts.txt", "w") as f:
-        for name, details in contacts.items():
-            f.write(f"{name}, {details['phone']}, {details['email']}\n")
+    with open("contacts.json", "w") as f:
+        json.dump(contacts, f, indent=4)
+
+#Number Validation
+def is_valid_phone(phone):
+    return phone.isdigit() and len(phone) == 10
 
 def add_contact():
     name = input("Enter name: ").strip()
-
-    if name in contacts:
-        print("Contact already exists.")
-        return
-
     phone = input("Enter phone number: ")
     email = input("Enter email: ")
 
-    contacts[name] = {
-        "phone": phone,
-        "email": email
-    }
+    if not is_valid_phone(phone):
+        print("Invalid phone number (must be 10 digits)")
+        return
+
+    contact_data = {"phone": phone, "email": email}
+
+    if name in contacts:
+        contacts[name].append(contact_data)
+    else:
+        contacts[name] = [contact_data]
 
     save_contacts()
-
     print("Contact added successfully!")
 
 def view_contact():
     if not contacts:
-        print("No contact found.")
+        print("No contacts found.")
         return
 
     print("\nCONTACT LIST")
-    print("-" * 40)
+    print("=" * 40)
 
-    for name, details in contacts.items():
-        print("\nName:", name)
-        print("Phone:", details["phone"])
-        print("Email:", details["email"])
-        print("-" * 40)
+    for name in sorted(contacts.keys()):
+        print(f"\n{name}")
+        for i, detail in enumerate(contacts[name], start=1):
+            print(f"  [{i}] Phone: {detail['phone']}, Email: {detail['email']}")
 
 def search_contact():
-    search = input("Enter contact name to search: ").lower()
+    search = input("Enter name to search: ").lower()
+
     found = False
-
-    print("\nSearch Results")
-    print("-" * 40)
-
-    for name, details in contacts.items():
+    for name in contacts:
         if search in name.lower():
-            print(f"Name: {name}")
-            print("Phone:", contacts[name]["phone"])
-            print("Email:", contacts[name]["email"])
-            print("-" * 40)
+            print(f"\n{name}")
+            for detail in contacts[name]:
+                print(f"Phone: {detail['phone']}, Email: {detail['email']}")
             found = True
 
     if not found:
-        print("Contact not found.")
+        print("No matching contact found.")
 
 def update_contact():
-    name = input("Enter contact name to update: ").strip()
+    name = input("Enter name to update: ")
 
     if name in contacts:
-        phone = input("Enter new phone number: ")
+        for i, detail in enumerate(contacts[name]):
+            print(f"{i+1}. {detail}")
+
+        index = int(input("Select contact number: ")) - 1
+
+        phone = input("Enter new phone: ")
         email = input("Enter new email: ")
 
-        contacts[name]["phone"] = phone
-        contacts[name]["email"] = email
+        if not is_valid_phone(phone):
+            print("Invalid phone number")
+            return
+
+        contacts[name][index] = {"phone": phone, "email": email}
 
         save_contacts()
-
-        print("Contact updated successfully!")
+        print("Updated successfully!")
     else:
         print("Contact not found.")
 
 def delete_contact():
-    name = input("Enter contact name to delete: ")
+    name = input("Enter name to delete: ")
 
     if name in contacts:
+        for i, detail in enumerate(contacts[name]):
+            print(f"{i+1}. {detail}")
+
+        index = int(input("Select contact number: ")) - 1
+
         confirm = input("Are you sure? (y/n): ").lower()
 
         if confirm == "y":
-            del contacts[name]
+            contacts[name].pop(index)
+
+            if not contacts[name]:
+                del contacts[name]
+
             save_contacts()
-            print("Contact deleted successfully!")
+            print("Deleted successfully!")
         else:
-            print("Deletion cancled.")
+            print("Cancelled")
     else:
         print("Contact not found.")
+
+#Export Contact in TXT
+def export_contacts():
+    with open("export.txt", "w") as f:
+        for name, details in contacts.items():
+            for detail in details:
+                f.write(f"{name} - {detail['phone']} - {detail['email']}\n")
+
+    print("Contacts exported successfully!")
 
 load_contacts()
 
