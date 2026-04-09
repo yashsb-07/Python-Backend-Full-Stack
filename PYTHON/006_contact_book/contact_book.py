@@ -1,5 +1,22 @@
 contacts = {}
 
+def load_contacts():
+    try: 
+        with open ("contacts.txt", "r") as f:
+            for line in f:
+                name, phone, email = line.strip().split(",")
+                contacts[name] = {
+                    "phone": phone,
+                    "email": email
+                }
+    except FileNotFoundError:
+        pass
+
+def save_contacts():
+    with open ("contacts.txt", "w") as f:
+        for name, details in contacts.items():
+            f.write(f"{name}, {details['phone']}, {details['email']}\n")
+
 def add_contact():
     name = input("Enter name: ").strip()
 
@@ -14,6 +31,8 @@ def add_contact():
         "phone": phone,
         "email": email
     }
+
+    save_contacts()
 
     print("Contact added successfully!")
 
@@ -59,6 +78,8 @@ def update_contact():
         contacts[name]["phone"] = phone
         contacts[name]["email"] = email
 
+        save_contacts()
+
         print("Contact updated successfully!")
     else:
         print("Contact not found.")
@@ -71,11 +92,14 @@ def delete_contact():
 
         if confirm == "y":
             del contacts[name]
+            save_contacts()
             print("Contact deleted successfully!")
         else:
             print("Deletion cancled.")
     else:
         print("Contact not found.")
+
+load_contacts()
 
 while True:
     print("\n===== CONTACT BOOK =====")
