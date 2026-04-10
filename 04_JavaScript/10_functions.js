@@ -29,3 +29,9 @@ function calcSum(a, b) {
 }
 
 calcSum(5,10)
+
+function calcAvg(a,b,c) {
+    console.log((a+b+c)/3)
+}
+
+calcAvg(3,3,3)
