@@ -3,3 +3,6 @@ const students = {
     age: 22,
     marks: 95
 }
+
+console.log(students.name)
+console.log(students.age)
