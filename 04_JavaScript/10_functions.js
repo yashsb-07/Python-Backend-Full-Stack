@@ -1,3 +1,5 @@
+/* Functions */
+
 function printHello() {
     console.log("Hello Yash! How are you?")
 };
@@ -13,3 +15,17 @@ rollDice()
 rollDice()
 rollDice()
 rollDice()
+
+/* Function Arguments */
+
+function printInfo(name, age) {
+    console.log(`${name}'s age is ${age}`)
+}
+
+printInfo("Yash", 22)
+
+function calcSum(a, b) {
+    console.log(`${a}+${b} = `, a+b)
+}
+
+calcSum(5,10)
