@@ -11,16 +11,41 @@
 
 /* Nested Objects */
 
-const classInfo = {
-    yash: {
-        grade: "A",
-        city: "Pune"
-    },
+// const classInfo = {
+//     yash: {
+//         grade: "A",
+//         city: "Pune"
+//     },
 
-    sakshi: {
-        grade: "A",
-        city: "Nashik"
-    }
-}
+//     sakshi: {
+//         grade: "A",
+//         city: "Nashik"
+//     }
+// }
 
-classInfo.sakshi.city = "Pune"
+// classInfo.sakshi.city = "Pune"
+
+/* Array of objects */
+
+// const classInfo = [
+//     {
+//         name: "Yash",
+//         age: 22,
+//         city: "Pune"
+//     },
+
+//     {
+//         name: "Sakshi",
+//         age: 21,
+//         city: "Pangari"
+//     },
+
+//     {
+//         name: "Shwetali",
+//         age: 25,
+//         city: "Pune"
+//     }
+// ]
+
+// console.log(classInfo[0])
+// console.log(classInfo[1])
