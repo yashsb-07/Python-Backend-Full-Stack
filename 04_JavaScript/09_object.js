@@ -4,5 +4,7 @@ const students = {
     marks: 95
 }
 
-console.log(students.name)
-console.log(students.age)
+// console.log(students.name)
+// console.log(students.age)
+
+students.name = "Sakshi"
