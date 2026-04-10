@@ -49,3 +49,8 @@
 
 // console.log(classInfo[0])
 // console.log(classInfo[1])
+
+/* Generate random num from 1 to 10 */
+
+let random = Math.floor(Math.random() * 10) + 1;
+console.log(random)
