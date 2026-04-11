@@ -35,3 +35,18 @@ function calcAvg(a,b,c) {
 }
 
 calcAvg(3,3,3)
+
+
+/* Get Sum of n numbers */
+
+function getSum(n){
+    let sum = 0;
+
+    for(let i = 1; i <= n; i++){
+        sum += i;
+    }
+
+    return sum
+}
+
+console.log(getSum(1000))
