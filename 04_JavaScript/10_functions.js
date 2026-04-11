@@ -80,3 +80,18 @@ let greet = function(){
 }
 
 console.log(multipleGreet(greet, 5))
+
+
+/* Arrow Function */
+
+let arrowSum = (a,b) =>{
+    console.log(a+b);
+}
+
+arrowSum(5,5)
+
+let arrowMul = (a,b) => {
+    console.log(a*b);
+}
+
+arrowMul(5,4)
