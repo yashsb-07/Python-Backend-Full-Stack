@@ -95,3 +95,11 @@ let arrowMul = (a,b) => {
 }
 
 arrowMul(5,4)
+
+/* Foreach method */
+
+let arr = ["yash", "sakshi"]
+
+arr.forEach(function printVal(val){
+    console.log(val);
+})
