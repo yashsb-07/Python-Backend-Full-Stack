@@ -50,3 +50,33 @@ function getSum(n){
 }
 
 console.log(getSum(1000))
+
+/* Concat string */
+
+let str = ["Hello", "Yash", "!"]
+
+function concatStr(str){
+    let result = "";
+
+    for(let i = 0; i < str.length; i++){
+        result += str[i];
+    }
+
+    return result;
+}
+
+console.log(concatStr(str))
+
+/* Higher Order Function */
+
+function multipleGreet(func, count){
+    for(let i=1; i<=count; i++){
+        func();
+    }
+}
+
+let greet = function(){
+    console.log("Hello Yash!")
+}
+
+console.log(multipleGreet(greet, 5))
