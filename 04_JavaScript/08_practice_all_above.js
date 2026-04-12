@@ -582,23 +582,40 @@
 
 /* 8. Find Prime Number */
 
-let num = Number(prompt("Enter a number:"));
+// let num = Number(prompt("Enter a number:"));
 
-let isPrime = true;
+// let isPrime = true;
 
-if (num <= 1) {
-  isPrime = false;
-} else {
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      isPrime = false;
-      break;
-    }
-  }
-}
+// if (num <= 1) {
+//   isPrime = false;
+// } else {
+//   for (let i = 2; i < num; i++) {
+//     if (num % i === 0) {
+//       isPrime = false;
+//       break;
+//     }
+//   }
+// }
 
-if (isPrime) {
-  console.log(num + " is a Prime Number");
-} else {
-  console.log(num + " is NOT a Prime Number");
+// if (isPrime) {
+//   console.log(num + " is a Prime Number");
+// } else {
+//   console.log(num + " is NOT a Prime Number");
+// }
+
+/* 9. Fibonacci Series */
+
+let n = Number(prompt("Enter number of terms:"));
+
+let first = 0;
+let second = 1;
+
+console.log("Fibonacci Series:");
+
+for (let i = 0; i < n; i++) {
+  console.log(first);
+
+  let next = first + second;
+  first = second;
+  second = next;
 }
