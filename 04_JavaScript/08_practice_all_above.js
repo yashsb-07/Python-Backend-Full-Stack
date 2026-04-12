@@ -458,40 +458,90 @@
 // let password = prompt("Enter your password:");
 // checkPassword(password);
 
-/* Simple Calculator */
+/* 4. Simple Calculator */
 
 // Take input
-let num1 = Number(prompt("Enter first number:"));
-let num2 = Number(prompt("Enter second number:"));
-let operator = prompt("Enter operator (+, -, *, /):");
+// let num1 = Number(prompt("Enter first number:"));
+// let num2 = Number(prompt("Enter second number:"));
+// let operator = prompt("Enter operator (+, -, *, /):");
 
-let result;
+// let result;
 
-switch (operator) {
-  case "+":
-    result = num1 + num2;
-    console.log("Result:", result);
+// switch (operator) {
+//   case "+":
+//     result = num1 + num2;
+//     console.log("Result:", result);
+//     break;
+
+//   case "-":
+//     result = num1 - num2;
+//     console.log("Result:", result);
+//     break;
+
+//   case "*":
+//     result = num1 * num2;
+//     console.log("Result:", result);
+//     break;
+
+//   case "/":
+//     if (num2 === 0) {
+//       console.log("Error: Cannot divide by zero");
+//     } else {
+//       result = num1 / num2;
+//       console.log("Result:", result);
+//     }
+//     break;
+
+//   default:
+//     console.log("Invalid operator");
+// }
+
+/* 5. ATM Machine */
+
+let balance = 1000;
+let choice;
+
+while (true) {
+  choice = Number(prompt(
+    "ATM Menu:\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice:"
+  ));
+
+  switch (choice) {
+    case 1:
+      console.log("Your balance is: ₹" + balance);
+      break;
+
+    case 2:
+      let depositAmount = Number(prompt("Enter amount to deposit:"));
+      if (depositAmount > 0) {
+        balance += depositAmount;
+        console.log("Deposited successfully!");
+      } else {
+        console.log("Invalid amount");
+      }
+      break;
+
+    case 3:
+      let withdrawAmount = Number(prompt("Enter amount to withdraw:"));
+      if (withdrawAmount > balance) {
+        console.log("Insufficient balance");
+      } else if (withdrawAmount > 0) {
+        balance -= withdrawAmount;
+        console.log("Withdrawal successful!");
+      } else {
+        console.log("Invalid amount");
+      }
+      break;
+
+    case 4:
+      console.log("Thank you for using ATM");
+      break;
+
+    default:
+      console.log("Invalid choice");
+  }
+
+  if (choice === 4) {
     break;
-
-  case "-":
-    result = num1 - num2;
-    console.log("Result:", result);
-    break;
-
-  case "*":
-    result = num1 * num2;
-    console.log("Result:", result);
-    break;
-
-  case "/":
-    if (num2 === 0) {
-      console.log("Error: Cannot divide by zero ❌");
-    } else {
-      result = num1 / num2;
-      console.log("Result:", result);
-    }
-    break;
-
-  default:
-    console.log("Invalid operator ❌");
+  }
 }
