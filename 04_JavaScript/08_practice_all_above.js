@@ -546,24 +546,36 @@
 //   }
 // }
 
-/* Student Grade System */
+/* 6. Student Grade System */
 
-let marks = Number(prompt("Enter your marks:"));
+// let marks = Number(prompt("Enter your marks:"));
 
-if (marks < 0 || marks > 100) {
-  console.log("Invalid marks ❌");
-} else if (marks >= 90) {
-  console.log("Grade: A");
-} else if (marks >= 80) {
-  console.log("Grade: B");
-} else if (marks >= 70) {
-  console.log("Grade: C");
-} else if (marks >= 60) {
-  console.log("Grade: D");
-} else if (marks >= 50) {
-  console.log("Grade: E");
-} else if (marks >= 40) {
-  console.log("Grade: Pass");
-} else {
-  console.log("Grade: Fail");
+// if (marks < 0 || marks > 100) {
+//   console.log("Invalid marks ❌");
+// } else if (marks >= 90) {
+//   console.log("Grade: A");
+// } else if (marks >= 80) {
+//   console.log("Grade: B");
+// } else if (marks >= 70) {
+//   console.log("Grade: C");
+// } else if (marks >= 60) {
+//   console.log("Grade: D");
+// } else if (marks >= 50) {
+//   console.log("Grade: E");
+// } else if (marks >= 40) {
+//   console.log("Grade: Pass");
+// } else {
+//   console.log("Grade: Fail");
+// }
+
+/* 7. Shopping Cart total price */
+
+let prices = [100, 200, 50];
+
+let total = 0;
+
+for (let price of prices) {
+  total += price;
 }
+
+console.log("Total Price:", total);
