@@ -605,17 +605,31 @@
 
 /* 9. Fibonacci Series */
 
-let n = Number(prompt("Enter number of terms:"));
+// let n = Number(prompt("Enter number of terms:"));
 
-let first = 0;
-let second = 1;
+// let first = 0;
+// let second = 1;
 
-console.log("Fibonacci Series:");
+// console.log("Fibonacci Series:");
 
-for (let i = 0; i < n; i++) {
-  console.log(first);
+// for (let i = 0; i < n; i++) {
+//   console.log(first);
 
-  let next = first + second;
-  first = second;
-  second = next;
+//   let next = first + second;
+//   first = second;
+//   second = next;
+// }
+
+/* 10. Pattern */
+
+let n = 5;
+
+for (let i = 1; i <= n; i++) {
+  let pattern = "";
+
+  for (let j = 1; j <= i; j++) {
+    pattern += "*";
+  }
+
+  console.log(pattern);
 }
