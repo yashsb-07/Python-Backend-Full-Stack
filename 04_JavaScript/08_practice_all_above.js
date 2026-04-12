@@ -570,12 +570,35 @@
 
 /* 7. Shopping Cart total price */
 
-let prices = [100, 200, 50];
+// let prices = [100, 200, 50];
 
-let total = 0;
+// let total = 0;
 
-for (let price of prices) {
-  total += price;
+// for (let price of prices) {
+//   total += price;
+// }
+
+// console.log("Total Price:", total);
+
+/* 8. Find Prime Number */
+
+let num = Number(prompt("Enter a number:"));
+
+let isPrime = true;
+
+if (num <= 1) {
+  isPrime = false;
+} else {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
 }
 
-console.log("Total Price:", total);
+if (isPrime) {
+  console.log(num + " is a Prime Number");
+} else {
+  console.log(num + " is NOT a Prime Number");
+}
