@@ -119,3 +119,14 @@ let students = {
 }
 
 console.log(students.getAvg())
+
+/* SetTimeout Function */
+
+console.log("Hello yash..")
+
+setTimeout(() => {
+    console.log("Apna College");
+    
+}, 2000);
+
+console.log("Welcome to")
