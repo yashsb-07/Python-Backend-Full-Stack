@@ -498,50 +498,72 @@
 
 /* 5. ATM Machine */
 
-let balance = 1000;
-let choice;
+// let balance = 1000;
+// let choice;
 
-while (true) {
-  choice = Number(prompt(
-    "ATM Menu:\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice:"
-  ));
+// while (true) {
+//   choice = Number(prompt(
+//     "ATM Menu:\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice:"
+//   ));
 
-  switch (choice) {
-    case 1:
-      console.log("Your balance is: ₹" + balance);
-      break;
+//   switch (choice) {
+//     case 1:
+//       console.log("Your balance is: ₹" + balance);
+//       break;
 
-    case 2:
-      let depositAmount = Number(prompt("Enter amount to deposit:"));
-      if (depositAmount > 0) {
-        balance += depositAmount;
-        console.log("Deposited successfully!");
-      } else {
-        console.log("Invalid amount");
-      }
-      break;
+//     case 2:
+//       let depositAmount = Number(prompt("Enter amount to deposit:"));
+//       if (depositAmount > 0) {
+//         balance += depositAmount;
+//         console.log("Deposited successfully!");
+//       } else {
+//         console.log("Invalid amount");
+//       }
+//       break;
 
-    case 3:
-      let withdrawAmount = Number(prompt("Enter amount to withdraw:"));
-      if (withdrawAmount > balance) {
-        console.log("Insufficient balance");
-      } else if (withdrawAmount > 0) {
-        balance -= withdrawAmount;
-        console.log("Withdrawal successful!");
-      } else {
-        console.log("Invalid amount");
-      }
-      break;
+//     case 3:
+//       let withdrawAmount = Number(prompt("Enter amount to withdraw:"));
+//       if (withdrawAmount > balance) {
+//         console.log("Insufficient balance");
+//       } else if (withdrawAmount > 0) {
+//         balance -= withdrawAmount;
+//         console.log("Withdrawal successful!");
+//       } else {
+//         console.log("Invalid amount");
+//       }
+//       break;
 
-    case 4:
-      console.log("Thank you for using ATM");
-      break;
+//     case 4:
+//       console.log("Thank you for using ATM");
+//       break;
 
-    default:
-      console.log("Invalid choice");
-  }
+//     default:
+//       console.log("Invalid choice");
+//   }
 
-  if (choice === 4) {
-    break;
-  }
+//   if (choice === 4) {
+//     break;
+//   }
+// }
+
+/* Student Grade System */
+
+let marks = Number(prompt("Enter your marks:"));
+
+if (marks < 0 || marks > 100) {
+  console.log("Invalid marks ❌");
+} else if (marks >= 90) {
+  console.log("Grade: A");
+} else if (marks >= 80) {
+  console.log("Grade: B");
+} else if (marks >= 70) {
+  console.log("Grade: C");
+} else if (marks >= 60) {
+  console.log("Grade: D");
+} else if (marks >= 50) {
+  console.log("Grade: E");
+} else if (marks >= 40) {
+  console.log("Grade: Pass");
+} else {
+  console.log("Grade: Fail");
 }
