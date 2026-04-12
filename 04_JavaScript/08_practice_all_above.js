@@ -421,39 +421,77 @@
 
 /* 3. Password Checker */
 
-function checkPassword(password) {
+// function checkPassword(password) {
   
-  if (password.length < 8) {
-    console.log("Invalid: Password must be at least 8 characters long");
-    return;
-  }
+//   if (password.length < 8) {
+//     console.log("Invalid: Password must be at least 8 characters long");
+//     return;
+//   }
 
-  let hasNumber = false;
-  let hasSpecialChar = false;
+//   let hasNumber = false;
+//   let hasSpecialChar = false;
 
-  for (let i = 0; i < password.length; i++) {
-    let char = password[i];
+//   for (let i = 0; i < password.length; i++) {
+//     let char = password[i];
 
-    if (char >= '0' && char <= '9') {
-      hasNumber = true;
+//     if (char >= '0' && char <= '9') {
+//       hasNumber = true;
+//     }
+
+//     else if (
+//       (char >= '!' && char <= '/') ||
+//       (char >= ':' && char <= '@') ||
+//       (char >= '[' && char <= '`') ||
+//       (char >= '{' && char <= '~')
+//     ) {
+//       hasSpecialChar = true;
+//     }
+//   }
+
+// if (hasNumber && hasSpecialChar) {
+//     console.log("Valid Password");
+//   } else {
+//     console.log("Invalid: Must contain at least one number and one special character");
+//   }
+// }
+
+// let password = prompt("Enter your password:");
+// checkPassword(password);
+
+/* Simple Calculator */
+
+// Take input
+let num1 = Number(prompt("Enter first number:"));
+let num2 = Number(prompt("Enter second number:"));
+let operator = prompt("Enter operator (+, -, *, /):");
+
+let result;
+
+switch (operator) {
+  case "+":
+    result = num1 + num2;
+    console.log("Result:", result);
+    break;
+
+  case "-":
+    result = num1 - num2;
+    console.log("Result:", result);
+    break;
+
+  case "*":
+    result = num1 * num2;
+    console.log("Result:", result);
+    break;
+
+  case "/":
+    if (num2 === 0) {
+      console.log("Error: Cannot divide by zero ❌");
+    } else {
+      result = num1 / num2;
+      console.log("Result:", result);
     }
+    break;
 
-    else if (
-      (char >= '!' && char <= '/') ||
-      (char >= ':' && char <= '@') ||
-      (char >= '[' && char <= '`') ||
-      (char >= '{' && char <= '~')
-    ) {
-      hasSpecialChar = true;
-    }
-  }
-
-if (hasNumber && hasSpecialChar) {
-    console.log("Valid Password");
-  } else {
-    console.log("Invalid: Must contain at least one number and one special character");
-  }
+  default:
+    console.log("Invalid operator ❌");
 }
-
-let password = prompt("Enter your password:");
-checkPassword(password);
