@@ -387,15 +387,34 @@
 
 /* 1. FizzBuzz */
 
-for(let i=1; i<=100; i++){
-    if(i % 3 === 0 && i % 5 === 0){
-    console.log("FizzBuzz");
-    } else if(i % 3 === 0){
-        console.log("Fizz");
-    } else if(i % 5 === 0){
-        console.log("Buzz");
-    } else{
-        console.log(i);
-    }
-}
+// for(let i=1; i<=100; i++){
+//     if(i % 3 === 0 && i % 5 === 0){
+//     console.log("FizzBuzz");
+//     } else if(i % 3 === 0){
+//         console.log("Fizz");
+//     } else if(i % 5 === 0){
+//         console.log("Buzz");
+//     } else{
+//         console.log(i);
+//     }
+// }
 
+/* 2. Number Guessing Game */
+
+let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+let guess;
+
+while (guess !== randomNumber) {
+  guess = Number(prompt("Enter a number between 1 and 10:"));
+
+  if (guess > randomNumber) {
+    console.log("Too high! Try again.");
+  } else if (guess < randomNumber) {
+    console.log("Too low! Try again.");
+  } else if (guess === randomNumber) {
+    console.log("Correct! You guessed it 🎉");
+  } else {
+    console.log("Invalid input!");
+  }
+}
