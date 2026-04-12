@@ -98,35 +98,53 @@ arrowMul(5,4)
 
 /* Foreach method */
 
-let arr = ["yash", "sakshi"]
+// let arr = ["yash", "sakshi"]
 
-arr.forEach(function printVal(val){
-    console.log(val);
-})
+// arr.forEach(function printVal(val){
+//     console.log(val);
+// })
 
 /* This Keyword */
 
-let students = {
-    name: "Yash",
-    age: 22,
-    eng: 95,
-    phy: 95,
-    chem: 65,
-    getAvg(){
-        let avg = (this.eng + this.phy + this.chem) / 3
-        console.log(avg)
-    }
-}
+// let students = {
+//     name: "Yash",
+//     age: 22,
+//     eng: 95,
+//     phy: 95,
+//     chem: 65,
+//     getAvg(){
+//         let avg = (this.eng + this.phy + this.chem) / 3
+//         console.log(avg)
+//     }
+// }
 
-console.log(students.getAvg())
+// console.log(students.getAvg())
 
 /* SetTimeout Function */
 
-console.log("Hello yash..")
+// console.log("Hello yash..")
+
+// setTimeout(() => {
+//     console.log("Apna College");
+    
+// }, 2000);
+
+// console.log("Welcome to")
+
+/* setInterval Function */
+
+// let id = setInterval(() => {
+//     console.log("Hello, Yash Bansode!");
+// }, 1000)
+
+// clearInterval(id)
+
+/* Question */
+
+let id2 = setInterval(() => {
+    console.log("Hello World!")
+}, 1000);
 
 setTimeout(() => {
-    console.log("Apna College");
-    
-}, 2000);
-
-console.log("Welcome to")
+    clearInterval(id2)
+}, 5000);
