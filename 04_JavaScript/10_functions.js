@@ -103,3 +103,19 @@ let arr = ["yash", "sakshi"]
 arr.forEach(function printVal(val){
     console.log(val);
 })
+
+/* This Keyword */
+
+let students = {
+    name: "Yash",
+    age: 22,
+    eng: 95,
+    phy: 95,
+    chem: 65,
+    getAvg(){
+        let avg = (this.eng + this.phy + this.chem) / 3
+        console.log(avg)
+    }
+}
+
+console.log(students.getAvg())
