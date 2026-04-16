@@ -27,3 +27,20 @@
 // console.log(div.innerText); // return only visible text
 // console.log(div.innerHTML);
 // console.log(div.textContent); // return hidden elements also
+
+
+/* Get and Set Attibute */
+
+// let div = document.querySelector("div");
+// console.log(div);
+
+// let id = div.getAttribute("id");
+// console.log(id)
+
+// let name = div.getAttribute("name");
+// console.log(name)
+
+// let para = document.querySelector("p");
+// console.log(para.getAttribute("class"));
+// console.log(para.setAttribute("class", "newClass"));
+// para.style.background = "green";
