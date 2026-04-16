@@ -44,3 +44,16 @@
 // console.log(para.getAttribute("class"));
 // console.log(para.setAttribute("class", "newClass"));
 // para.style.background = "green";
+
+
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click Me!";
+
+let div = document.querySelector("div");
+div.append(newBtn);
+div.prepend(newBtn);
+div.before(newBtn);
+div.after(newBtn);
+
+let para = document.querySelector("p");
+para.remove();
