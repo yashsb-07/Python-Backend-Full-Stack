@@ -17,6 +17,12 @@
 # __init__ Function or constructor
 
 class Student():
+
+    #Default constructor
+    def __init__(self):
+        pass
+
+    #Parameterized constructor
     def __init__(self, fullName):
         self.name = fullName
         print("Adding new student in database")
