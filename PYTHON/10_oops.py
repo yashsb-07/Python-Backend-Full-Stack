@@ -51,22 +51,41 @@
 
 #Methods
 
-class Student():
-    college = "ABC College"
+# class Student():
+#     college = "ABC College"
 
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.marks = marks
+    
+#     def welcome(self):
+#         print(f"Welcome student, {self.name}")
+
+#     def get_marks(self):
+#         return self.marks
+
+    
+# s1 = Student("Yash Bansode", 97)
+# s1.welcome()
+# print(s1.get_marks())
+
+#Question
+
+class Student:
+    
     def __init__(self, name, marks):
         self.name = name
         self.marks = marks
+
+    def get_avg(self):
+        sum = 0
+        for val in self.marks:
+            sum += val
+        print(f"Hello {self.name} your avg marks is: {sum/3}%")
+
     
-    def welcome(self):
-        print(f"Welcome student, {self.name}")
+s1 = Student("Yash", [99,98,97])
+s1.get_avg()
 
-    def get_marks(self):
-        return self.marks
-
-    
-s1 = Student("Yash Bansode", 97)
-s1.welcome()
-print(s1.get_marks())
-
+        
 
