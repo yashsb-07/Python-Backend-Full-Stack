@@ -71,21 +71,31 @@
 
 #Question
 
+# class Student:
+    
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.marks = marks
+
+#     def get_avg(self):
+#         sum = 0
+#         for val in self.marks:
+#             sum += val
+#         print(f"Hello {self.name} your avg marks is: {sum/3}%")
+
+    
+# s1 = Student("Yash", [99,98,97])
+# s1.get_avg()
+
+#Static Methods: this methods don't use the self parameter (wrok at class level)
+
 class Student:
-    
-    def __init__(self, name, marks):
-        self.name = name
-        self.marks = marks
+    @staticmethod
+    def hello():
+        print("Hello")
 
-    def get_avg(self):
-        sum = 0
-        for val in self.marks:
-            sum += val
-        print(f"Hello {self.name} your avg marks is: {sum/3}%")
-
-    
-s1 = Student("Yash", [99,98,97])
-s1.get_avg()
+s1 = Student()
+s1.hello()
 
         
 
