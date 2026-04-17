@@ -114,6 +114,8 @@
 # car = Car()
 # car.start()
 
+#Encapsulation
+
 class Account:
     def __init__(self, balance, acc_no):
         self.balance = balance
