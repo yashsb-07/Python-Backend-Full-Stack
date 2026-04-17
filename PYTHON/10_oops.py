@@ -89,13 +89,55 @@
 
 #Static Methods: this methods don't use the self parameter (wrok at class level)
 
-class Student:
-    @staticmethod
-    def hello():
-        print("Hello")
+# class Student:
+#     @staticmethod
+#     def hello():
+#         print("Hello")
 
-s1 = Student()
-s1.hello()
+# s1 = Student()
+# s1.hello()
+
+#Abstraction
+
+# class Car:
+#     def __init__(self):
+#         self.accl = False
+#         self.brk = False
+#         self.clutch = False
+
+#     def start(self):
+#         self.clutch = True
+#         self.brk = True
+#         print("Car started..")
+
+    
+# car = Car()
+# car.start()
+
+class Account:
+    def __init__(self, balance, acc_no):
+        self.balance = balance
+        self.acc_no = acc_no
+
+    def debit(self, amt):
+        self.balance -= amt
+        print(f"Rs. {amt} was debited")
+        print(f"Total balance: {self.get_balance()}")
+
+    def credit(self, amt):
+        self.balance += amt
+        print(f"Rs. {amt} was credited")
+        print(f"Total balance: {self.get_balance()}")
+
+    def get_balance(self):
+        return self.balance
+    
+acc1 = Account(10000, 12345)
+acc1.debit(1000)
+acc1.credit(500)
+
+
+        
 
         
 
