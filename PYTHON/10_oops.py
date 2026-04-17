@@ -16,11 +16,27 @@
 
 # __init__ Function or constructor
 
-class Student():
+# class Student():
 
-    #Default constructor
-    def __init__(self):
-        pass
+#     #Default constructor
+#     def __init__(self):
+#         pass
+
+#     #Parameterized constructor
+#     def __init__(self, fullName):
+#         self.name = fullName
+#         print("Adding new student in database")
+
+    
+# s1 = Student("Yash Bansode")
+# print(s1.name)
+# s2 = Student("Sakshi Bansode")
+# print(s2.name)
+
+# Class & Instance attribute
+
+class Student():
+    college = "ABC College"
 
     #Parameterized constructor
     def __init__(self, fullName):
@@ -30,6 +46,7 @@ class Student():
     
 s1 = Student("Yash Bansode")
 print(s1.name)
-s2 = Student("Sakshi Bansode")
-print(s2.name)
+# print(Student.college)
+print(s1.college)
+
 
