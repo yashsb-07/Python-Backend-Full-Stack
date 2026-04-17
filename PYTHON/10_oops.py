@@ -35,18 +35,38 @@
 
 # Class & Instance attribute
 
+# class Student():
+#     college = "ABC College"
+
+#     #Parameterized constructor
+#     def __init__(self, fullName):
+#         self.name = fullName
+#         print("Adding new student in database")
+
+    
+# s1 = Student("Yash Bansode")
+# print(s1.name)
+# # print(Student.college)
+# print(s1.college)
+
+#Methods
+
 class Student():
     college = "ABC College"
 
-    #Parameterized constructor
-    def __init__(self, fullName):
-        self.name = fullName
-        print("Adding new student in database")
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+    
+    def welcome(self):
+        print(f"Welcome student, {self.name}")
+
+    def get_marks(self):
+        return self.marks
 
     
-s1 = Student("Yash Bansode")
-print(s1.name)
-# print(Student.college)
-print(s1.college)
+s1 = Student("Yash Bansode", 97)
+s1.welcome()
+print(s1.get_marks())
 
 
