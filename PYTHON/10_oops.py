@@ -209,9 +209,65 @@
 # print(c1.varB)
 # print(c1.varC)
 
+#Super Method
+
+# class Car:
+#     def __init__(self,type):
+#         self.type = type
+       
+#     @staticmethod
+#     def start():
+#         print("Car started..")
+
+#     def stop():
+#         print("Car stopped.")
+
+# class ToyotaCar(Car):
+
+#     def __init__(self, name, type):
+#         super().__init__(type)
+#         self.name = name
+#         super().start()
+
+# car1 = ToyotaCar("Fortuner", "Petrol")
+# print(car1.name, car1.type)
+
+#Class Method
+
+# class Person:
+#     name = "anonymous"
 
 
+#     # def changeName(self, name):
+#     #     self.name = name
 
+#     @classmethod
+#     def changeName(cls, name):
+#         cls.name = name
+
+# p1 = Person()
+# p1.changeName("Yash Bansode")
+# print(p1.name)
+# print(Person.name)
+
+#Property Decorator
+
+
+# class Student:
+#     def __init__(self, phy, chem, math):
+#         self.phy = phy
+#         self.chem = chem
+#         self.math = math
+
+#     @property
+#     def percentage(self):
+#         return str((self.phy + self.chem + self.math)/3) + "%"
+
+# s1 = Student(98, 97, 99)
+# print(s1.percentage)
+
+# s1.phy = 86
+# print(s1.percentage)
         
 
         
