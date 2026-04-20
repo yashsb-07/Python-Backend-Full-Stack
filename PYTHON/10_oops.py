@@ -166,6 +166,49 @@
 # print(p1.welcome())
 
 
+#Inheritance
+
+# class Car:
+
+#     color = "black"
+#     @staticmethod
+#     def start():
+#         print("Car started..")
+
+#     def stop():
+#         print("Car stopped.")
+
+# class ToyotaCar(Car):
+
+#     def __init__(self, brand):
+#         self.brand = brand
+
+# class Fortuner(ToyotaCar):
+#     def __init__(self, type):
+#         self.type = type
+
+# car1 = ToyotaCar("Fortuner")
+# print(car1.name, car1.start())
+# print(car1.color)
+        
+# car2 = Fortuner("Petrol")
+# car2.start()
+# print(car2.type)
+
+# class A:
+#     varA = "Welcome to class A"
+
+# class B:
+#     varB = "Welcome to class B"
+
+# class C(A, B):
+#     varC= "Welcome to class C"
+
+# c1 = C()
+# print(c1.varA)
+# print(c1.varB)
+# print(c1.varC)
+
 
 
 
