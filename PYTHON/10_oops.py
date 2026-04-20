@@ -252,7 +252,6 @@
 
 #Property Decorator
 
-
 # class Student:
 #     def __init__(self, phy, chem, math):
 #         self.phy = phy
@@ -338,3 +337,42 @@
 # eng = Engineer("Yash", 22)
 # eng.showDetails()
         
+#Project 1: Bank System
+
+# class BankAccount:
+#     def __init__(self, name, acc_no, balance):
+#         self.name = name
+#         self.account_no = acc_no
+#         self.__balance = balance
+
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             print(f"Rs. {amount} deposited successfully!")
+#         else:
+#             print("Invalid amount")
+
+#     def withdraw(self, amount):
+#         if amount <= self.__balance:
+#             self.__balance -= amount
+#             print(f"Rs. {amount} withdrawn successfully!")
+#         else:
+#             print("Insufficient fund.")
+
+#     def get_balance(self):
+#         return self.__balance
+
+#     def display(self):
+#         print(f"Name: {self.name}")
+#         print(f"Account Number: {self.account_no}")
+#         print(f"Balance: {self.__balance}")
+    
+
+# acc1 = BankAccount("Yash Bansode", 1234567, 100000)
+# acc1.deposit(100)
+# print(acc1.get_balance())
+# acc1.withdraw(1000)
+# print(acc1.get_balance())
+# acc1.display()
+
+    
