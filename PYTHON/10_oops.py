@@ -116,27 +116,57 @@
 
 #Encapsulation
 
-class Account:
-    def __init__(self, balance, acc_no):
-        self.balance = balance
-        self.acc_no = acc_no
+# class Account:
+#     def __init__(self, balance, acc_no):
+#         self.balance = balance
+#         self.acc_no = acc_no
 
-    def debit(self, amt):
-        self.balance -= amt
-        print(f"Rs. {amt} was debited")
-        print(f"Total balance: {self.get_balance()}")
+#     def debit(self, amt):
+#         self.balance -= amt
+#         print(f"Rs. {amt} was debited")
+#         print(f"Total balance: {self.get_balance()}")
 
-    def credit(self, amt):
-        self.balance += amt
-        print(f"Rs. {amt} was credited")
-        print(f"Total balance: {self.get_balance()}")
+#     def credit(self, amt):
+#         self.balance += amt
+#         print(f"Rs. {amt} was credited")
+#         print(f"Total balance: {self.get_balance()}")
 
-    def get_balance(self):
-        return self.balance
+#     def get_balance(self):
+#         return self.balance
     
-acc1 = Account(10000, 12345)
-acc1.debit(1000)
-acc1.credit(500)
+# acc1 = Account(10000, 12345)
+# acc1.debit(1000)
+# acc1.credit(500)
+
+#del Keayword
+
+# class Student:
+    
+#     def __init__(self, name):
+#         self.name = name
+
+# s1 = Student("Yash")
+# print(s1.name)
+# del s1.name
+# print(s1.name)
+
+#Private Attribute and methods
+
+# class Person:
+
+#     __name = "Yash"
+
+#     def __hello(self):
+#         print("Hello yash")
+
+#     def welcome(self):
+#         self.__hello()
+
+# p1 = Person()
+# print(p1.welcome())
+
+
+
 
 
         
