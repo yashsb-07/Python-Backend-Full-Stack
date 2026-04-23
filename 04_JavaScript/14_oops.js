@@ -1,4 +1,5 @@
 /* Class */
+
 class ToyotaCar{
     constructor() {
         console.log("Creating a new object.");
@@ -17,5 +18,26 @@ class ToyotaCar{
     }
 }
 
-let fortuner = new ToyotaCar();
-let lexus = new ToyotaCar();
+// let fortuner = new ToyotaCar();
+// let lexus = new ToyotaCar();
+
+/* Inheritance */
+
+class Person {
+    eat(){
+        console.log("Eat");
+    }
+
+    sleep(){
+        console.log("Sleep")
+    }
+}
+
+class Engineer extends Person {
+    work(){
+        console.log("Solve problems, build something.")
+    }
+}
+
+let yash = new Engineer();
+console.log(yash.eat());
