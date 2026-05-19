@@ -3,7 +3,7 @@ Hi, I'm Yash 👋
 Welcome to my learning repository!
 This repo documents my journey of becoming a Python Backend / Full-Stack Developer.
 
-🎯 Aspiring Python Backend / Full-Stack Developer
+🎯 Python Backend / Full-Stack Developer
 📍 Currently learning HTML, CSS, JavaScript, Python, and Flask
 
 I am learning step-by-step by studying concepts and building practical projects using HTML, CSS, JavaScript, Python, Flask, and databases.
@@ -49,7 +49,7 @@ Product Card UI
 Landing Page Design
 Blog Layout
 
-📈 Learning Method
+📈 My Learning Method
 
 My learning process follows this approach:
 
