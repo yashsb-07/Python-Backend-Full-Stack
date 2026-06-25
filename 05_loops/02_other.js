@@ -66,6 +66,36 @@ const myCoding = [
 
 myCoding.forEach( (item) => {
     
-    console.log(item.languageName);    
+    // console.log(item.languageName);    
 
 } )
+
+// Filter
+
+const myNums = [1,2,3,4,5,6,7,8,9,10]
+
+const newNums = myNums.filter( (num) => num > 4)
+// console.log(newNums);
+
+
+//Map
+
+const myNumbers = [1,2,3,4,5,6,7,8,9,10]
+
+// const newNumbers = myNumbers.map( (num) => {return num + 1})
+
+const newNumbers = myNumbers.map((num) => num * 10).map((num) => num + 1).filter((num) => num >= 40)
+
+// console.log(newNumbers);
+
+const nums = [1,2,3,4,5,6,7,8,9,10]
+
+// const myTotal = nums.reduce(function (acc, currval) {
+//     console.log(`acc: ${acc} and currval: ${currval}`);
+//     return acc + currval
+// }, 0)
+
+const myTotal = nums.reduce( (acc, currval) => acc + currval, 0)
+
+console.log(myTotal);
+
