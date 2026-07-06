@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/03_HTML_CSS_Projects/netflix_landing_page/index.html"
+    "livePreview.defaultPreviewPath": "/03_HTML_CSS_Projects/netflix_landing_page/index.html",
+    "editor.acceptSuggestionOnEnter": "on"
 }
