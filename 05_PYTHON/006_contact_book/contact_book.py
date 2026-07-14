@@ -22,7 +22,7 @@ def add_contact():
     email = input("Enter email: ")
 
     if not is_valid_phone(phone):
-        print("Invalid phone number (number must be 10 digits)")
+        print("Invalid phone number (must be 10 digits)")
         return
 
     contact_data = {"phone": phone, "email": email}
