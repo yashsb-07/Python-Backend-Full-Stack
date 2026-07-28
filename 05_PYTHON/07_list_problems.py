@@ -1,4 +1,4 @@
-#Remove duplicates
+# Remove duplicates
 
 # numbers = [1,2,3,2,4,5,1,6]
 
@@ -21,7 +21,7 @@
 
 # print(f"Second largest number is: {second_larget}")
 
-#Even number filter
+# Even number filter
 
 # numbers = [1,2,3,4,5,6,7,8,9,10]
 
@@ -33,7 +33,7 @@
 
 # print(even_numbers)
 
-#Pass and Fail student list
+# Pass and Fail student list
 
 # marks = [85, 90, 78, 92, 88]
 
